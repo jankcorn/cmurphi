@@ -6,3 +6,8 @@ MU := $(TOPDIR)/bin/mu
 .m.C:
 	${MU} ${MURPHILOCALOPT} ${MURPHIOPT} $<
 
+.PHONY: clean
+compile: all
+
+clean:
+	rm -f *.C

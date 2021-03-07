@@ -4609,7 +4609,7 @@ int generate_ruleset()
     }
   fprintf(codefile,
 	  "Error.Notrace(\"Internal: NextStateGenerator -- checking condition for nonexisting rule.\");\n"
-	  "}\n"
+	  "  return false; }\n"
 	  );
 
 
@@ -4664,7 +4664,7 @@ int generate_ruleset()
         }
     }
   fprintf(codefile,
-          "}\n"
+          " return -1; }\n"
           );
 
   // generate Name(r)

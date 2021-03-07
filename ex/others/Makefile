@@ -52,6 +52,8 @@ CFLAGS = -Wno-write-strings
 # optimization
 #OFLAGS = -O3
 
+all: abp arbiter dp4 dpnew
+
 # rules for compiling
 abp: abp.C
 	${CXX} ${CFLAGS} ${OFLAGS} -o abp abp.C -I${INCLUDEPATH} -lm

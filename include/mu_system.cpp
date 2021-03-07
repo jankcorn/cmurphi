@@ -690,7 +690,7 @@ unsigned long RuleManager::NumRulesFired()
 void 
 RuleManager::print_rules_information()
 {
-  bool exist;
+  bool exist = FALSE;
 
   if (args->print_rule.value)
     {

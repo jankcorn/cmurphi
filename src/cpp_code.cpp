@@ -748,8 +748,9 @@ char *arraytypedecl::generate_decl()
  	    // "    delete[ OLD_GPP(strlen(array[i].name) +1) ] array[i].name; // Should be delete[] \n"
  	    "}\n",
  	    mu_name,
- 	    mu_name,
- 	    indextype->getsize());
+ 	    mu_name
+ 	    //, indextype->getsize()
+            );
 
     fprintf(codefile, "/*** end array declaration ***/\n");
     fprintf(codefile, "%s %s_undefined_var;\n\n", mu_name, mu_name);
@@ -886,8 +887,8 @@ char *multisettypedecl::generate_decl()
 	    "  {\n"
 	    "    return 0;\n"
 	    "  }\n",
-	    mu_name, mu_name,
-	    maximum_size
+	    mu_name, mu_name
+	    //, maximum_size
 	    );
  
     /* comparsion function */
@@ -1151,8 +1152,8 @@ char *multisettypedecl::generate_decl()
  	    // "  delete[ OLD_GPP(strlen(current_size[i].name) +1) ] current_size.name; // Should be delete[] \n"
 	    "}\n",
  	    mu_name,
- 	    mu_name,
- 	    maximum_size);
+ 	    mu_name);
+ 	    //maximum_size);
  
     // declare procedures for all multisetcount
     if (msclist != NULL) msclist->generate_procedure();

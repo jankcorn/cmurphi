@@ -545,8 +545,6 @@ void symmetryclass::generate_heuristic_fast_normalization()
 	      "    %s.MultisetSort();\n" 
 	      "\n",
 	      var->s->getvalue()->mu_name,
-	      var->s->getvalue()->mu_name,
-	      var->s->getvalue()->mu_name,
 	      var->s->getvalue()->mu_name
 	      );
 

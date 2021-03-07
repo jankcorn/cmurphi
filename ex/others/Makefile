@@ -39,9 +39,9 @@ include ../../makefile.in
 INCLUDEPATH = ../../include
 
 # choice of compiler (with REQUIRED options)
-#CXX = g++ #                                 # for beet, elaines, dawns, cabbage
+CXX = g++ #                                 # for beet, elaines, dawns, cabbage
 #CXX = CC +d -DCATCH_DIV #                   # for elaines
-CXX = OCC +d #                              # for beet
+#CXX = OCC +d #                              # for beet
 #CXX = DCC #                                 # for beet
 
 # options (really OPTIONAL)

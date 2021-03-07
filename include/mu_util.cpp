@@ -104,11 +104,11 @@ err_new_handler(void)
 /* we should #include <signal.h> at some point. */   
 // Uli: CATCH_DIV has to be defined or undefined depending on compiler
 //      and operating system
-#ifndef CATCH_DIV
-void catch_div_by_zero(...)
-#else
+//#ifndef CATCH_DIV
+//void catch_div_by_zero(...)
+//#else
 void catch_div_by_zero(int)
-#endif
+//#endif
 { Error.Error("Division by zero."); }
 
 /* From Andreas\' code. */

@@ -2360,8 +2360,7 @@ void arraytypedecl::generate_canonicalize_function(symmetryclass& symmetry)
                       d->mu_name, d->getsize(), d->getsize(),
                       d->mu_name, d->getsize(),
                       d->mu_name, d->getsize(),
-                      d->mu_name, d->getsize(),
-                      d->mu_name
+                      d->mu_name, d->getsize()
                       );
             }
         }

@@ -40,7 +40,7 @@ CPLUSPLUS = g++
 HOSTTYPE = x86_64
 
 # choice of the options
-CFLAGS = -O4 -Wno-write-strings -m32        # options for g++
+CFLAGS = -O4 -Wno-write-strings        # options for g++
 #CFLAGS = -O4 -pipe -static #
 #CFLAGS = -static #
 #CFLAGS = -w #                              # options for OCC

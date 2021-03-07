@@ -57,6 +57,7 @@
 
 #ifndef _STATE_
 #define _STATE_
+#include <stdint.h>    // uint32_t
 
 /****************************************
   There are three different declarations:
@@ -214,7 +215,7 @@ public:
 class state_set
 {
 #ifdef HASHC
-  typedef unsigned long Unsigned32;    // basic building block of the hash 
+  typedef uint32_t Unsigned32;    // basic building block of the hash 
                                        // table, slots may have different size
 #endif
 

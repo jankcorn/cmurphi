@@ -1,3 +1,4 @@
+include ../../makefile.in
 #
 # Makefile for compiling the Murphi verifier for a given protocol 
 #          from its .C file
@@ -44,7 +45,7 @@ CXX = OCC +d #                              # for beet
 #CXX = DCC #                                 # for beet
 
 # options (really OPTIONAL)
-CFLAGS = -Wno-write-strings -m32
+CFLAGS = -Wno-write-strings
 #CFLAGS = -fno-default-inline #              # for g++, only on beet and cabbage
 #CFLAGS = +d -w #                            # for DCC
 

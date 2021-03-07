@@ -1,5 +1,5 @@
 /* -*- C++ -*-
- * mu.C
+ * mu.cpp
  * @(#) main() for the Murphi compiler.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of
@@ -467,7 +467,7 @@ int main(int argc, char *argv[])
 ****************************************/
 
 /********************
- $Log: mu.C,v $
+ $Log: mu.cpp,v $
  Revision 1.3  1999/01/29 08:28:10  uli
  efficiency improvements for security protocols
 

@@ -1,5 +1,5 @@
 /*  -*- C++ -*-
- * lextable.C
+ * lextable.cpp
  * @(#) implementation for the hash table used by the Murphi lexer.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of
@@ -338,7 +338,7 @@ lextable ltable;
 ****************************************/
 
 /********************
- $Log: lextable.C,v $
+ $Log: lextable.cpp,v $
  Revision 1.2  1999/01/29 07:49:13  uli
  bugfixes
 

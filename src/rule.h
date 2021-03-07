@@ -59,9 +59,9 @@
 
 /********************
   In each class there are 4 sections
-  1) initializer --> declaration in rule.C
-  2) supporting routines --> declaration in rule.C
-  3) code generation --> declaration in cpp_code.C
+  1) initializer --> declaration in rule.cpp
+  2) supporting routines --> declaration in rule.cpp
+  3) code generation --> declaration in cpp_code.cpp
   ********************/
 
 /********************

@@ -1,5 +1,5 @@
 /* -*- C++ -*-
- * mu_verifier.C
+ * mu_verifier.cpp
  * @(#) Main routines for the driver for Murphi verifiers.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of              
@@ -149,7 +149,7 @@ int main(int argc, char **argv)
 ****************************************/
 
 /********************
-  $Log: mu_verifier.C,v $
+  $Log: mu_verifier.cpp,v $
   Revision 1.2  1999/01/29 07:49:11  uli
   bugfixes
 

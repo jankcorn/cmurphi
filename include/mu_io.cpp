@@ -1,5 +1,5 @@
 /* -*- C++ -*-
- * mu_io.C * @(#) interface routines for the driver for Murphi verifiers.
+ * mu_io.cpp * @(#) interface routines for the driver for Murphi verifiers.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of              
  * Leland Stanford Junior University.
@@ -1497,7 +1497,7 @@ const TraceFileManager::Buffer* TraceFileManager::read(unsigned long number)
 ****************************************/
 
 /********************
-  $Log: mu_io.C,v $
+  $Log: mu_io.cpp,v $
   Revision 1.3  1999/01/29 08:28:09  uli
   efficiency improvements for security protocols
 

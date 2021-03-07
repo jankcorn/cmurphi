@@ -80,21 +80,21 @@ mechanism if possible.
 Appendix A. Catalog of Include Files for the Verifier:
 
 mu_epilog.inc  : Main include file, included at the end of the
-                 compiled program.  This file calls most of the *.C files.
-mu_io.C	       : Code related to I/O.
+                 compiled program.  This file calls most of the *.cpp files.
+mu_io.cpp	       : Code related to I/O.
 mu_io.h	       : Header for code related to I/O.
-mu_live.C      : Code related to checking of liveness properties.
+mu_live.cpp      : Code related to checking of liveness properties.
 mu_prolog.inc  : Main include file, included at the begining of the
 	         compiled program.  This file calls most of the *.h files.
-mu_state.C     : Code related to states in the state graph. 
+mu_state.cpp     : Code related to states in the state graph. 
 mu_state.h     : Header for code related to states in the state graph.
-mu_sym.C       : Code related to symmetry reduction.
+mu_sym.cpp       : Code related to symmetry reduction.
 mu_sym.h       : Header for code related to symmetry reduction.
-mu_util.C      : Code related to other utilities.
+mu_util.cpp      : Code related to other utilities.
 mu_util.h      : Header for code related to other utilities.
 mu_util_dep.h  : Header for code related to other utilities,
 	         dependent to constant declared in the compiled program.
-mu_verifier.C  : Code related to the verification algorithms.
+mu_verifier.cpp  : Code related to the verification algorithms.
 mu_verifier.h  : Header for code related to the verification algorithms.
     
 Appendix B. Hints and Tips:

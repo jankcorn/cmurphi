@@ -1,5 +1,5 @@
 /*  -*- C++ -*-
- * parse.C
+ * parse.cpp
  * @(#) general structures to support parsing for the Murphi compiler.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of
@@ -190,7 +190,7 @@ bool type_equal(typedecl *a, typedecl *b)
 ****************************************/
 
 /********************
- $Log: parse.C,v $
+ $Log: parse.cpp,v $
  Revision 1.2  1999/01/29 07:49:13  uli
  bugfixes
 

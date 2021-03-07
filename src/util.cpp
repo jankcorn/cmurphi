@@ -1,5 +1,5 @@
 /* -*- C++ -*-
- * util.C
+ * util.cpp
  * @(#) utility routines for the Murphi compiler.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of
@@ -126,7 +126,7 @@ int new_int()
 ****************************************/
 
 /********************
- $Log: util.C,v $
+ $Log: util.cpp,v $
  Revision 1.2  1999/01/29 07:49:13  uli
  bugfixes
 

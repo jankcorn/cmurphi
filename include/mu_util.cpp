@@ -1,5 +1,5 @@
 /* -*- C++ -*-
- * mu_util.C
+ * mu_util.cpp
  * @(#) Auxiliary routines for the driver for Murphi verifiers.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of              
@@ -400,7 +400,7 @@ unsigned long randomGen::next()
 ****************************************/
 
 /********************
-  $Log: mu_util.C,v $
+  $Log: mu_util.cpp,v $
   Revision 1.2  1999/01/29 07:49:11  uli
   bugfixes
 

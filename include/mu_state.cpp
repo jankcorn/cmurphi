@@ -1,5 +1,5 @@
 /* -*- C++ -*-
- * mu_state.C
+ * mu_state.cpp
  * @(#) Auxiliary routines related to states in the verifier
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of              
@@ -552,7 +552,7 @@ state_set::print_capacity( void )
 ****************************************/
 
 /********************
-  $Log: mu_state.C,v $
+  $Log: mu_state.cpp,v $
   Revision 1.3  1999/01/29 08:28:09  uli
   efficiency improvements for security protocols
 

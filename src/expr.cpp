@@ -1,5 +1,5 @@
 /* -*- C++ -*-
- * expr.C
+ * expr.cpp
  * @(#) Implementation for Murphi expressions.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of
@@ -567,7 +567,7 @@ designator *error_designator = NULL;
 ****************************************/
 
 /********************
- $Log: expr.C,v $
+ $Log: expr.cpp,v $
  Revision 1.3  1999/01/29 08:28:10  uli
  efficiency improvements for security protocols
 

@@ -1,5 +1,5 @@
 /* -*- C++ -*-
- * symtab.C
+ * symtab.cpp
  * @(#) implementation for Murphi\'s symbol table.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of
@@ -274,7 +274,7 @@ const int symboltable::globalscope = 1;
 ****************************************/
 
 /********************
- $Log: symtab.C,v $
+ $Log: symtab.cpp,v $
  Revision 1.2  1999/01/29 07:49:13  uli
  bugfixes
 

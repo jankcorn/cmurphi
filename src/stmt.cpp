@@ -1,5 +1,5 @@
 /* -*- C++ -*-
- * stmt.C
+ * stmt.cpp
  * @(#) code for statement classes for Murphi.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of
@@ -330,7 +330,7 @@ stmt *nullstmt = NULL;
 ****************************************/
 
 /********************
- $Log: stmt.C,v $
+ $Log: stmt.cpp,v $
  Revision 1.2  1999/01/29 07:49:13  uli
  bugfixes
 

@@ -1,5 +1,5 @@
 /* -*- C++ -*-
- * decl.C
+ * decl.cpp
  * @(#) implementation of declarations in Murphi.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of
@@ -695,7 +695,7 @@ beta2.9S released
 ****************************************/
 
 /********************
- $Log: decl.C,v $
+ $Log: decl.cpp,v $
  Revision 1.2  1999/01/29 07:49:12  uli
  bugfixes
 

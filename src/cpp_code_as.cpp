@@ -1,6 +1,6 @@
 /* -*- C++ -*-
- * error.C
- * @(#) a simple error handler for the Murphi compiler.
+ * cpp_code_as.cpp
+ * @(#) C++ code generation module for the Murphi compiler.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of
  * Leland Stanford Junior University.
@@ -41,113 +41,107 @@
  *
  * Read the file "license" distributed with these sources, or call
  * Murphi with the -l switch for additional information.
- * 
+ *
  */
 
 /* 
  * Original Author: Ralph Melton
- * 
+ * Rewritten by Denis Leroy, June 15, 1995
+ *
  * Update:
  *
  * None
- *
  */ 
 
 #include "mu.h"
-#include <stdarg.h>
-#include <iostream>
 
-using namespace std;
-/********************
-  class Error_handler
-  ********************/
-Error_handler::Error_handler( void ) 
-: numerrors(0), numwarnings(0)
+void 
+arraytypedecl::generate_assign()
 {
-}
+  char indexstr[3];
 
-void Error_handler::vError( const char *fmt, va_list argp )
+  strcpy(indexstr, (indextype->getsize() > 1 ? "i" : "0"));
+  fprintf(codefile,
+	  "  %s& operator= (const %s& from)\n"
+	  "  {\n",
+	  mu_name, mu_name);
+  if (indextype->getsize() > 1)
+    fprintf(codefile,
+            "    for (int i = 0; i < %d; i++)\n",
+	    indextype->getsize());
+  if (elementtype->issimple())
+    fprintf(codefile,
+	    "      array[%s].value(from.array[%s].value());\n",
+	    indexstr, indexstr);
+  else
+    fprintf(codefile,
+	    "      array[%s] = from.array[%s];\n",
+	    indexstr, indexstr);
+  fprintf(codefile,
+            "    return *this;\n"
+            "  }\n\n");
+};
+
+void 
+multisettypedecl::generate_assign()
 {
-  cout.flush();
-  fprintf(stderr, "%s:%d:", gFileName, gLineNum);
-  vfprintf(stderr, fmt, argp);
-  fprintf(stderr, "\n");
-  numerrors++;
-}
+  char indexstr[3];
 
-void Error_handler::Error( const char *fmt, ... )
+  strcpy(indexstr, (maximum_size > 1 ? "i" : "0"));
+  fprintf(codefile,
+	  "  %s& operator= (const %s& from)\n"
+	  "  {\n",
+	  mu_name, mu_name);
+  if (maximum_size > 1)
+    fprintf(codefile,
+	    "    for (int i = 0; i < %d; i++)\n",
+	    maximum_size);
+  if (elementtype->issimple())
+      fprintf(codefile,
+	      "    {\n"
+	      "        array[%s].value(from.array[%s].value());\n"
+	      "        valid[%s].value(from.valid[%s].value());\n",
+	      indexstr, indexstr, indexstr, indexstr);
+  else
+      fprintf(codefile,
+	      "    {\n"
+	      "       array[%s] = from.array[%s];\n"
+	      "       valid[%s].value(from.valid[%s].value());\n",
+	    indexstr, indexstr, indexstr, indexstr);
+  fprintf(codefile,
+	  "    };\n"
+	  "    current_size = from.get_current_size();\n"
+	  "    return *this;\n"
+	  "  }\n\n");
+};
+
+void recordtypedecl::generate_assign()
 {
-  va_list argp;
-  va_start ( argp, fmt);
-  vError(fmt, argp);
-  va_end(argp);
-}
+  ste *f;
 
-bool Error_handler::CondError( const bool test, const char *fmt, ... )
-{
-  if (test)
-    {
-      va_list argp;
-      va_start ( argp, fmt);
-      vError( fmt, argp);
-      va_end(argp);
-    }
-  return test;
-}
-
-void Error_handler::FatalError( const char *fmt, ... )
-{
-  cout.flush();
-  va_list argp;
-  va_start ( argp, fmt);
-  vfprintf(stderr, fmt, argp);
-  fprintf(stderr, "\n");
-  fflush(stderr);
-  va_end(argp); /* This doesn\'t matter much, does it? */
-  exit(1);
-}
-
-void Error_handler::vWarning( const char *fmt, va_list argp )
-{
-  cout.flush();
-  fprintf(stderr, "%s:%d: warning: ", gFileName, gLineNum);
-  vfprintf(stderr, fmt, argp);
-  fprintf(stderr, "\n");
-  numwarnings++;
-}
-
-void Error_handler::Warning( const char *fmt, ... )
-{
-  va_list argp;
-  va_start ( argp, fmt);
-  vWarning(fmt, argp);
-  va_end(argp);
-}
-
-bool Error_handler::CondWarning( const bool test, const char *fmt, ... )
-{
-  if (test)
-    {
-      va_list argp;
-      va_start ( argp, fmt);
-      vWarning(fmt, argp);
-      va_end(argp);
-    }
-  return test;
-}
-
-/********************
-  declare Error_handler instances
-  ********************/
-Error_handler Error;
-
-/****************************************
-  * 8 March 94 Norris Ip:
-  merge with the latest rel2.6
-****************************************/
+  fprintf(codefile,
+	  "  %s& operator= (const %s& from) {\n",
+	  mu_name,
+	  mu_name);
+  for( f = fields; f != NULL; f = f->getnext() ) {
+    if (f->getvalue()->gettype()->issimple())
+      fprintf(codefile,
+	      "    %s.value(from.%s.value());\n",
+	      f->getvalue()->generate_code(),
+	      f->getvalue()->generate_code());
+    else
+      fprintf(codefile,
+	      "    %s = from.%s;\n",
+	      f->getvalue()->generate_code(),
+	      f->getvalue()->generate_code());
+  }
+  fprintf(codefile,
+	  "    return *this;\n"
+	  "  };\n");
+};
 
 /********************
- $Log: error.C,v $
+ $Log: cpp_code_as.cpp,v $
  Revision 1.2  1999/01/29 07:49:12  uli
  bugfixes
 

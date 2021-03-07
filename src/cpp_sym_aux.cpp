@@ -1,5 +1,5 @@
 /* -*- C++ -*-
- * cpp_sym_aux.C
+ * cpp_sym_aux.cpp
  * @(#) Auxiliary Symmetry Code Generation
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of
@@ -1225,7 +1225,7 @@ beta2.9S released
 ****************************************/
 
 /********************
- $Log: cpp_sym_aux.C,v $
+ $Log: cpp_sym_aux.cpp,v $
  Revision 1.2  1999/01/29 07:49:12  uli
  bugfixes
 

@@ -73,24 +73,24 @@
   supporting routines
   ****************************************/
 #ifdef HASHC
-#include "mu_hash.C"
+#include "mu_hash.cpp"
 #endif
-#include "mu_util.C"
-#include "mu_io.C"
-#include "mu_state.C"
-#include "mu_system.C"
-#include "mu_sym.C"
+#include "mu_util.cpp"
+#include "mu_io.cpp"
+#include "mu_state.cpp"
+#include "mu_system.cpp"
+#include "mu_sym.cpp"
 
 
 /****************************************
   main routines
   ****************************************/
-#include "mu_verifier.C"
+#include "mu_verifier.cpp"
 
 /****************************************
   Old Log:
   1) 3 Dec 93 Norris Ip: 
-  add #include "mu_sym.C"
+  add #include "mu_sym.cpp"
   2) 8 March 94 Norris Ip:
   merge with the latest rel2.6
 ****************************************/

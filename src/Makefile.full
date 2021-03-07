@@ -73,35 +73,35 @@ OBJS = 	lex.yy.o \
 mu: $(OBJS)
 	$(CPLUSPLUS) -o mu $(CFLAGS) $(OBJS)
 
-mu.o: mu.C mu.h
-	$(CPLUSPLUS) -c $(CFLAGS) mu.C
+mu.o: mu.cpp mu.h
+	$(CPLUSPLUS) -c $(CFLAGS) mu.cpp
 
-cpp_code.o: cpp_code.C mu.h
-	$(CPLUSPLUS) -c $(CFLAGS) cpp_code.C
+cpp_code.o: cpp_code.cpp mu.h
+	$(CPLUSPLUS) -c $(CFLAGS) cpp_code.cpp
 
-cpp_code_as.o: cpp_code_as.C mu.h
-	$(CPLUSPLUS) -c $(CFLAGS) cpp_code_as.C
+cpp_code_as.o: cpp_code_as.cpp mu.h
+	$(CPLUSPLUS) -c $(CFLAGS) cpp_code_as.cpp
 
-cpp_sym.o: cpp_sym.C mu.h
-	$(CPLUSPLUS) -c $(CFLAGS) cpp_sym.C
+cpp_sym.o: cpp_sym.cpp mu.h
+	$(CPLUSPLUS) -c $(CFLAGS) cpp_sym.cpp
 
-cpp_sym_aux.o: cpp_sym_aux.C mu.h
-	$(CPLUSPLUS) -c $(CFLAGS) cpp_sym_aux.C
+cpp_sym_aux.o: cpp_sym_aux.cpp mu.h
+	$(CPLUSPLUS) -c $(CFLAGS) cpp_sym_aux.cpp
 
-cpp_sym_decl.o: cpp_sym_decl.C mu.h
-	$(CPLUSPLUS) -c $(CFLAGS) cpp_sym_decl.C
+cpp_sym_decl.o: cpp_sym_decl.cpp mu.h
+	$(CPLUSPLUS) -c $(CFLAGS) cpp_sym_decl.cpp
 
-decl.o: decl.C mu.h
-	$(CPLUSPLUS) -c $(CFLAGS) decl.C
+decl.o: decl.cpp mu.h
+	$(CPLUSPLUS) -c $(CFLAGS) decl.cpp
 
-error.o: error.C mu.h
-	$(CPLUSPLUS) -c $(CFLAGS) error.C
+error.o: error.cpp mu.h
+	$(CPLUSPLUS) -c $(CFLAGS) error.cpp
 
-expr.o: expr.C mu.h y.tab.h
-	$(CPLUSPLUS) -c $(CFLAGS) expr.C
+expr.o: expr.cpp mu.h y.tab.h
+	$(CPLUSPLUS) -c $(CFLAGS) expr.cpp
 
-lextable.o: lextable.C mu.h lextable.h y.tab.h
-	$(CPLUSPLUS) -c $(CFLAGS) lextable.C
+lextable.o: lextable.cpp mu.h lextable.h y.tab.h
+	$(CPLUSPLUS) -c $(CFLAGS) lextable.cpp
 
 lextable.h: y.tab.h
 
@@ -120,23 +120,23 @@ no_code: no_code.o $(OBJS)
 	lex.yy.o \
 	y.tab.o
 
-no_code.o: no_code.C mu.h
-	$(CPLUSPLUS) -c $(CFLAGS) no_code.C
+no_code.o: no_code.cpp mu.h
+	$(CPLUSPLUS) -c $(CFLAGS) no_code.cpp
 
-rule.o: rule.C mu.h
-	$(CPLUSPLUS) -c $(CFLAGS) rule.C
+rule.o: rule.cpp mu.h
+	$(CPLUSPLUS) -c $(CFLAGS) rule.cpp
 
-stmt.o: stmt.C mu.h
-	$(CPLUSPLUS) -c $(CFLAGS) stmt.C
+stmt.o: stmt.cpp mu.h
+	$(CPLUSPLUS) -c $(CFLAGS) stmt.cpp
 
-symtab.o: symtab.C mu.h lextable.h y.tab.h
-	$(CPLUSPLUS) -c $(CFLAGS) symtab.C
+symtab.o: symtab.cpp mu.h lextable.h y.tab.h
+	$(CPLUSPLUS) -c $(CFLAGS) symtab.cpp
 
-util.o: util.C mu.h
-	$(CPLUSPLUS) -c $(CFLAGS) util.C
+util.o: util.cpp mu.h
+	$(CPLUSPLUS) -c $(CFLAGS) util.cpp
 
-parse.o: parse.C mu.h
-	$(CPLUSPLUS) -c $(CFLAGS) parse.C
+parse.o: parse.cpp mu.h
+	$(CPLUSPLUS) -c $(CFLAGS) parse.cpp
 
 lex.yy.o: lex.yy.c mu.h lextable.h
 	$(CPLUSPLUS) -c $(CFLAGS) lex.yy.c

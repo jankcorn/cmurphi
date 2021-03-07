@@ -1,5 +1,5 @@
 /*
- * cpp_sym.C
+ * cpp_sym.cpp
  * @(#) Symmetry Code Generation
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of
@@ -919,7 +919,7 @@ void symmetryclass::generate_heuristic_small_mem_canonicalization()
   using fast simple variable/array canonicalization and other
   variables using fast exhaustive
   * 20 Dec 93 Norris Ip:
-  move auxiliary code to cpp_sym_aux.C and cpp_sym_decl.C
+  move auxiliary code to cpp_sym_aux.cpp and cpp_sym_decl.cpp
   created scalarset array of scalarset permutation set restriction
            void symmetryclass::generate_fast_canonicalization_3()
   * 31 Jan 94 Norris Ip:
@@ -938,7 +938,7 @@ beta2.9S released
 ****************************************/
 
 /********************
- $Log: cpp_sym.C,v $
+ $Log: cpp_sym.cpp,v $
  Revision 1.2  1999/01/29 07:49:12  uli
  bugfixes
 

@@ -1,5 +1,5 @@
 /* -*- C++ -*-
- * mu_system.C
+ * mu_system.cpp
  * @(#) procedure for anaylsing the system 
  *      to be simulated or verified
  *
@@ -998,7 +998,7 @@ AlgorithmManager::simulate()
 }
 
 /********************
-  $Log: mu_system.C,v $
+  $Log: mu_system.cpp,v $
   Revision 1.3  1999/01/29 08:28:09  uli
   efficiency improvements for security protocols
 

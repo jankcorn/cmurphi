@@ -1,5 +1,5 @@
 /*  -*- C++ -*-
- * rule.C
+ * rule.cpp
  * @(#) code for rules, startstates, and invariants for the Murphi compiler.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of
@@ -317,7 +317,7 @@ simplerule *error_rule = NULL;
 ****************************************/
 
 /********************
- $Log: rule.C,v $
+ $Log: rule.cpp,v $
  Revision 1.3  1999/01/29 08:28:10  uli
  efficiency improvements for security protocols
 

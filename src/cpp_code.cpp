@@ -1,5 +1,5 @@
 /* -*- C++ -*-
- * cpp_code.C
+ * cpp_code.cpp
  * @(#) C++ code generation module for the Murphi compiler.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of 
@@ -4893,7 +4893,7 @@ char *program::generate_code()
 ****************************************/
 
 /********************
- $Log: cpp_code.C,v $
+ $Log: cpp_code.cpp,v $
  Revision 1.3  1999/01/29 08:28:09  uli
  efficiency improvements for security protocols
 

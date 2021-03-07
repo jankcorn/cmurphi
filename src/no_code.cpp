@@ -1,5 +1,5 @@
 /* -*- C++ -*-
- * no_code.C
+ * no_code.cpp
  * @(#) Empty code generation for the Murphi compiler.
  *
  * Copyright (C) 1992 - 1999 by the Board of Trustees of
@@ -421,7 +421,7 @@ char *program::generate_code()
 
 
 /********************
- $Log: no_code.C,v $
+ $Log: no_code.cpp,v $
  Revision 1.2  1999/01/29 07:49:13  uli
  bugfixes
 
